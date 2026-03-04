@@ -1,0 +1,373 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "trustpilot": {
+          "type": "trustpilot_rating",
+          "settings": {
+            "rating_score": "4.8/5 Excellent",
+            "review_count": "2381"
+          }
+        },
+        "clinicians": {
+          "type": "clinicians_badge",
+          "settings": {
+            "clinician_count": "521"
+          }
+        },
+        "benefits": {
+          "type": "benefits_list",
+          "settings": {
+            "benefit_text_1": "Supports Healthy Lymph Flow",
+            "benefit_text_2": "Reduces Water Retention",
+            "benefit_text_3": "Boosts Energy",
+            "benefit_text_4": "Natural Ingredients",
+            "benefit_text_5": "Clinically Tested",
+            "benefit_text_6": "Fast Acting"
+          }
+        }
+      },
+      "block_order": [
+        "trustpilot",
+        "title",
+        "price",
+        "clinicians",
+        "benefits",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "trust_bar": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "logo_1": {
+          "type": "column",
+          "settings": {}
+        },
+        "logo_2": {
+          "type": "column",
+          "settings": {}
+        },
+        "logo_3": {
+          "type": "column",
+          "settings": {}
+        },
+        "logo_4": {
+          "type": "column",
+          "settings": {}
+        }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4"]
+    },
+    "problem_symptoms": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "Problem / Symptoms",
+        "columns_desktop": 5,
+        "color_scheme": "scheme-2"
+      },
+      "blocks": {
+        "s_1": {
+          "type": "column",
+          "settings": {}
+        },
+        "s_2": {
+          "type": "column",
+          "settings": {}
+        },
+        "s_3": {
+          "type": "column",
+          "settings": {}
+        },
+        "s_4": {
+          "type": "column",
+          "settings": {}
+        },
+        "s_5": {
+          "type": "column",
+          "settings": {}
+        }
+      },
+      "block_order": ["s_1", "s_2", "s_3", "s_4", "s_5"]
+    },
+    "root_cause": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!-- Symptom-to-Root-Cause table goes here -->\n<div class='page-width'><h2>Root Cause Education</h2></div>"
+      }
+    },
+    "education_science": {
+      "type": "image-with-text",
+      "settings": {
+        "layout": "image_first"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Science Behind Sculptique"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>...</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"]
+    },
+    "missing_piece": {
+      "type": "image-with-text",
+      "settings": {
+        "layout": "text_first"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Missing Piece"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>pale green background</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"]
+    },
+    "ingredients": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "8-Ingredient System",
+        "columns_desktop": 4
+      },
+      "blocks": {
+        "i_1": {
+          "type": "column",
+          "settings": {}
+        },
+        "i_2": {
+          "type": "column",
+          "settings": {}
+        },
+        "i_3": {
+          "type": "column",
+          "settings": {}
+        },
+        "i_4": {
+          "type": "column",
+          "settings": {}
+        }
+      },
+      "block_order": ["i_1", "i_2", "i_3", "i_4"]
+    },
+    "synergistic_effect": {
+      "type": "rich-text",
+      "settings": {},
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Synergistic Effect"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"]
+    },
+    "social_proof": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class='page-width scroll-trigger animate--slide-in'><div class='stat-circles' style='background: conic-gradient(...)'><h2>87% and 91%</h2></div></div>"
+      }
+    },
+    "reviews": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!-- Reviews Integration (App Block fallback) -->"
+      }
+    },
+    "trust_icons_footer": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "Trust Icons",
+        "columns_desktop": 4
+      },
+      "blocks": {
+        "t_1": {
+          "type": "column",
+          "settings": {}
+        },
+        "t_2": {
+          "type": "column",
+          "settings": {}
+        },
+        "t_3": {
+          "type": "column",
+          "settings": {}
+        },
+        "t_4": {
+          "type": "column",
+          "settings": {}
+        }
+      },
+      "block_order": ["t_1", "t_2", "t_3", "t_4"]
+    },
+    "expert_advice": {
+      "type": "image-with-text",
+      "settings": {
+        "layout": "image_first"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Expert Advice"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"]
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "settings": {
+        "heading": "Frequently Asked Questions"
+      },
+      "blocks": {
+        "f_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 1"
+          }
+        },
+        "f_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 2"
+          }
+        },
+        "f_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 3"
+          }
+        }
+      },
+      "block_order": ["f_1", "f_2", "f_3"]
+    }
+  },
+  "order": [
+    "trust_bar",
+    "main",
+    "problem_symptoms",
+    "root_cause",
+    "education_science",
+    "missing_piece",
+    "ingredients",
+    "synergistic_effect",
+    "social_proof",
+    "reviews",
+    "trust_icons_footer",
+    "expert_advice",
+    "faq",
+    "related-products"
+  ]
+}
