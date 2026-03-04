@@ -386,33 +386,89 @@
                   </div>
                 </div>
 
-                <script
-                  async=""
-                  type="text/javascript"
-                  src="https://app.thefrontrowhealth.com/api/widgets/script?presentation_type=sticker&product_id=2691"
-                ></script>
-                <iframe
-                  data-state="max"
-                  class="iframe-frontrow-sticker"
-                  id="frontrow-sticker"
-                  frameborder="0"
-                  src="https://app.thefrontrowhealth.com/api/widgets?presentation_type=sticker&product_id=2691"
-                ></iframe>
-
+                
                 <style>
-                  .iframe.frontrow {
-                    display: none;
-                    position: fixed;
-                    left: 0;
-                    top: 0;
-                    z-index: 99999997;
-                    right: 0;
-                    bottom: 0;
-                    width: 100%;
-                    height: 100%;
-                    overflow: hidden;
+                  .clinicians-choice {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    background: #fbfbfb;
+                    border: 1px solid #eee;
+                    border-radius: 8px;
+                    padding: 16px;
+                    margin-top: 24px;
+                    margin-bottom: 24px;
+                  }
+                  .clinicians-choice-badge {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    flex-shrink: 0;
+                    text-align: center;
+                    width: 80px;
+                  }
+                  .clinicians-choice-badge svg {
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 5px;
+                  }
+                  .clinicians-choice-badge span {
+                    font-size: 11px;
+                    font-weight: bold;
+                    line-height: 1.1;
+                  }
+                  .clinicians-choice-text {
+                    font-size: 14px;
+                    line-height: 1.4;
+                  }
+                  .clinicians-choice-text strong {
+                    font-weight: bold;
+                  }
+                  .clinicians-choice-text a {
+                    text-decoration: underline;
+                    color: #000;
+                  }
+                  .clinicians-choice-footer {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-top: 8px;
+                  }
+                  .clinicians-avatars {
+                    display: flex;
+                  }
+                  .clinicians-avatars img {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    margin-left: -8px;
+                    border: 2px solid #fff;
+                  }
+                  .clinicians-avatars img:first-child {
+                    margin-left: 0;
                   }
                 </style>
+                <div class="clinicians-choice">
+                  <div class="clinicians-choice-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                      <path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 8.843 5.3m-8.843-5.3a8.997 8.997 0 0 0-8.843 5.3" />
+                      <circle cx="12" cy="12" r="3" fill="#000"/>
+                    </svg>
+                    <span>Clinicians' Choice</span>
+                  </div>
+                  <div class="clinicians-choice-text">
+                    <strong>521 clinicians</strong>, including dermatologists, share this on <em>FrontrowMD</em>. <a href="#">Learn more</a>
+                    <div class="clinicians-choice-footer">
+                      <div class="clinicians-avatars">
+                        <img src="https://ui-avatars.com/api/?name=J&background=random" />
+                        <img src="https://ui-avatars.com/api/?name=A&background=random" />
+                        <img src="https://ui-avatars.com/api/?name=M&background=random" />
+                      </div>
+                      <small>Read their reviews</small>
+                    </div>
+                  </div>
+                </div>
+
 
                 <div class="product_selector-content" style="margin-top: 0">
                   <div class="product-selector_outer active_block" data="sub">
@@ -1205,6 +1261,265 @@
           </div>
         </div>
       </section>
+      <div
+        id="shopify-section-template--27434517070167__press"
+        class="shopify-section index-section"
+      >
+        <style>
+          .section_press_logos_outer {
+            position: relative;
+            /* max-width: 1920px; */
+            margin: auto;
+          }
+
+          .section_press_logos_outer .section_holder {
+            position: relative;
+            max-width: 100vw;
+            margin: auto;
+            line-height: 1;
+            background: #fff7f8;
+          }
+
+          @keyframes logo_scroll {
+            0% {
+              transform: translate(0);
+            }
+            100% {
+              transform: translate(-50%);
+            }
+          }
+
+          .section_press_logos_outer .press_logos_wrapper {
+            display: grid;
+            margin: auto;
+            grid-template-columns: 125px 1fr;
+            grid-gap: 20px 70px;
+            padding: 0 50px;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+
+          .section_press_logos_outer .title_wrap {
+            font-size: 24px;
+            letter-spacing: 0px;
+            color: #000000;
+            margin: 0;
+          }
+
+          .section_press_logos_outer .auto_scrolling_logos {
+            width: 100%;
+            overflow: hidden;
+            min-width: 1px;
+          }
+
+          .section_press_logos_outer .logos_wrap {
+            display: flex;
+            animation: logo_scroll 60s infinite linear;
+            align-items: center;
+            width: fit-content;
+          }
+
+          .section_press_logos_outer .logos_wrap img {
+            height: 30px;
+            width: auto;
+            display: block;
+            margin: 0 50px;
+          }
+
+          .section_press_logos_outer .press_logos_wrapper {
+            /* height: 90px; */
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+            padding: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            align-content: center;
+          }
+
+          @media screen and (max-width: 900px) {
+            .section_press_logos_outer .section_holder {
+              /* padding: 14px 20px; */
+            }
+
+            .section_press_logos_outer .logos_wrap img {
+              max-height: 20px;
+              margin: 0 25px;
+            }
+
+            .section_press_logos_outer .title_wrap {
+              font-size: 18px;
+            }
+
+            .section_press_logos_outer .logos_wrap {
+              /* animation: logo_scroll 20s infinite linear; */
+            }
+          }
+        </style>
+
+        <!--This part handling the logo that's rolling over-->
+        <div class="section_press_logos_outer">
+          <div id="press_ress">
+            <div class="section_holder">
+              <div class="press_logos_wrapper">
+                <h3 class="title_wrap">As Seen In</h3>
+                <div class="auto_scrolling_logos">
+                  <div class="logos_wrap">
+                    <img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_42_Grazia-Logo_1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_43_WH_Logo_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_42_Grazia-Logo_1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_43_WH_Logo_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_42_Grazia-Logo_1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_43_WH_Logo_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_42_Grazia-Logo_1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_43_WH_Logo_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_42_Grazia-Logo_1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_43_WH_Logo_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_42_Grazia-Logo_1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_41_layer1_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    /><img
+                      src="{{ \'imgi_43_WH_Logo_500x.png\' | asset_url }}"
+                      alt="logo"
+                      class="press_logo"
+                      width="auto"
+                      height="auto"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 {% schema %}
 {
   "name": "Product Information",
