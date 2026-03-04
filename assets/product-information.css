@@ -1,0 +1,785 @@
+/* ================================================
+   Product Information Section - Consolidated CSS
+   Extracted from: sitewide.css, buy-page-stylesheet.css, lymph_stylesheet.css
+   ================================================ */
+
+/* --- Base / Container --- */
+.main_section img {
+  width: 100%;
+}
+
+.main_product-outer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.main_product-container {
+  display: flex;
+  gap: 64px;
+}
+
+.main_product-container > div {
+  width: calc(50% - 32px);
+}
+
+/* --- Reviews Badge --- */
+.main_product-reviews {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.main_product-reviews img {
+  width: 100px;
+  display: block;
+}
+
+.main_product-reviews p {
+  margin: 0;
+  line-height: 1.3em;
+  font-size: 16px;
+}
+
+/* --- Title --- */
+.main_product-title {
+  font-size: 28px;
+  margin: 16px 0;
+  line-height: 1.4em;
+  font-family: Lora, serif;
+  font-weight: 400;
+}
+
+/* --- Feature / Benefit Lines --- */
+.main_product-features {
+  margin-bottom: 8px;
+}
+
+.main_product-feature-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.main_product-feature-line > div:nth-child(1) {
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.main_product-feature-line > div:nth-child(2) {
+  width: 100%;
+}
+
+.main_product-feature-line p {
+  margin: 0;
+  line-height: 1.3em;
+  font-size: 16px;
+}
+
+/* --- Variant Selector Container --- */
+.product_selector-content {
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff7f8;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.product_selector-content .product-selector_outer {
+  margin-top: 0;
+}
+
+.product-selector_outer.active_block {
+  display: block;
+}
+
+.product-selector_outer {
+  display: none;
+  margin-top: 24px;
+}
+
+/* --- Variant Selector Blocks --- */
+.product-selector_block {
+  border-radius: 12px;
+  border: 1px solid rgba(247, 160, 160, 1);
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.product-selector_head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.product-selector_head > div:nth-child(1) {
+  width: 32px;
+}
+
+.product-selector_head > div:nth-child(2) {
+  width: 100%;
+}
+
+.product-selector_head > div:nth-child(3) {
+  width: 50%;
+  text-align: right;
+}
+
+/* --- Radio Bubble --- */
+.product-selector_bubble {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(247, 160, 160, 1);
+}
+
+.active .product-selector_bubble_inn {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block !important;
+  background: #f7a0a0;
+}
+
+/* --- Text inside selector --- */
+.product-selector_title,
+.product-selector_price {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3em;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.product-selector_info {
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.3em;
+}
+
+.product-selector_compare {
+  font-size: 14px;
+  line-height: 1.3em;
+  margin: 0;
+  display: block;
+}
+
+/* --- Perk Lines --- */
+.active .product-selector_perk_line {
+  opacity: 1;
+}
+
+.product-selector_perk_line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f7a0a0;
+  padding: 4px 8px;
+  border-bottom: 1px solid white;
+  opacity: 0.6;
+}
+
+.product-selector_perk_line:last-child {
+  border-bottom: none;
+}
+
+.product-selector_perk_line img {
+  width: 100%;
+  display: block;
+}
+
+.product-selector_perk_line > div:nth-child(2) {
+  width: 100%;
+}
+
+.product-selector_perk_line > div:nth-child(1) {
+  width: 34px;
+}
+
+.product-selector_perk_line p {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1em;
+}
+
+.product-selector_perks {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+/* --- Badge (Valentine's Day Sale) --- */
+.product-selector_badge {
+  position: absolute;
+  top: -20px;
+  right: -5px;
+}
+
+/* --- Autoship Checkbox --- */
+.pp_var_autoship-outer {
+  position: relative;
+  margin-top: 12px;
+}
+
+.pp_var_autoship-label {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px 12px 0 0;
+  background: #e76769;
+  font-size: 14px;
+  line-height: 1.3em;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+
+.pp_var_autoship-label p {
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.pp_var_autoship {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px dashed #f7a0a0;
+  border-radius: 8px;
+  padding: 12px;
+  gap: 12px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
+.pp_var_checkbox {
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid #f7a0a0;
+  background: #f7a0a0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.pp_var_autoship.disabled svg {
+  opacity: 0;
+}
+
+.pp_var_autoship.disabled {
+  background: #ece5e5;
+}
+
+.pp_var_autoship.disabled:not(.simplified) .pp_var_checkbox {
+  border: 1.5px solid black;
+  background: #0000001a;
+}
+
+.pp_var_autoship_title {
+  font-weight: 700;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.pp_var_autoship_text {
+  margin: 0;
+  font-size: 14px;
+  color: #2c2c2c;
+}
+
+/* --- Delivery Estimate --- */
+.col_pp_atc_usp_line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.col_pp_atc_usp_line > div:nth-child(1) {
+  width: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.col_pp_atc_usp_line > div:nth-child(2) {
+  width: 100%;
+}
+
+.col_pp_atc_usp_line p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.3em;
+}
+
+.col_pp_atc_usp_line span {
+  background: #d5416e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* --- ATC Button --- */
+.product-selector_atc,
+.product-selector_atc_champs {
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+  transition: all 0.2s;
+  border: none;
+}
+
+.product-selector_atc:hover,
+.product-selector_atc_champs:hover {
+  opacity: 0.8;
+}
+
+/* --- Payment Icons --- */
+.product_payment-icons {
+  margin: 16px 0;
+  display: block;
+  width: 100%;
+}
+
+/* --- Under CTA Notes --- */
+.under_cta_new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 15px;
+}
+
+.under_cta_new p.cta-note {
+  margin: unset !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+}
+
+.under_cta_new p.cta-note img {
+  height: 16px;
+  width: 16px;
+  object-fit: contain;
+}
+
+.under_cta_new p.cta-note:last-child:before {
+  content: "|";
+  position: absolute;
+  left: -1px;
+  top: 0;
+}
+
+.under_cta_new p.cta-note + p.cta-note {
+  padding-left: 16px;
+  position: relative;
+}
+
+/* --- Testimonial Review Card --- */
+.main_product-review {
+  margin-top: 24px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff7f8;
+}
+
+.main_product-review-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.main_product-review-meta > div:nth-child(1) {
+  width: 15%;
+}
+
+.main_product-review-meta > div:nth-child(2) {
+  width: 100%;
+}
+
+.main_product-review-meta p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.main_product-review-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.main_product-review-meta p img {
+  max-width: 120px;
+}
+
+.main_product-review-stars {
+  display: block;
+  max-width: 100px;
+  margin-top: 6px;
+}
+
+.main_product-review-content p {
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.3em;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.main_product-review-content p:last-child {
+  margin-bottom: 0;
+}
+
+.main_product-review-content strong {
+  font-weight: 600;
+}
+
+/* --- Collapsible Tabs --- */
+.product_tab-block_out {
+  margin-top: 16px;
+}
+
+.product_tab-block {
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 32px;
+  border: 1px solid #d2d2d2;
+  cursor: pointer;
+}
+
+.product_tab-block.active {
+  border: 1px solid #d5416e;
+}
+
+.product_tab-thumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.product_tab-thumb p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.product_tab-thumb span {
+  display: flex;
+  align-items: center;
+}
+
+.product_tab-thumb img {
+  width: 24px;
+  display: block;
+  transition: all 0.2s;
+}
+
+.product_tab-block.active .product_tab-thumb img {
+  transform: rotate(45deg);
+}
+
+.product_tab-content {
+  padding-top: 16px;
+  display: none;
+}
+
+.product_tab-block.active .product_tab-content {
+  display: block;
+}
+
+.product_tab-content p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.3em;
+  letter-spacing: 0;
+}
+
+.product_tab-content p:last-child {
+  margin-bottom: 0;
+}
+
+.product_tab-content ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.product_tab-content li {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-bottom: 4px;
+}
+
+/* --- Image Gallery (Desktop) --- */
+.main_product-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main_product-images img {
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main_product-2nd {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.main_product-3rd {
+  display: grid;
+  margin: 16px 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.main_product-2nd.bottom img {
+  aspect-ratio: auto;
+}
+
+.main_product-nutrition-info {
+  position: absolute;
+  bottom: 32px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1.2em;
+  max-width: 290px;
+  padding: 8px 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid black;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  white-space: nowrap;
+}
+
+.main_product-nutrition-info img {
+  width: 24px;
+}
+
+.main_product-nutrition-info span {
+  display: flex;
+  align-items: center;
+}
+
+.main_product-image-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main-producT_bf_badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px !important;
+  height: auto;
+  aspect-ratio: auto !important;
+}
+
+/* --- Mobile Carousel --- */
+.main_product-image-carousel {
+  position: relative;
+}
+
+.main_product-image-carousel .slick-slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.main_product-image-carousel_thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+.main_product-image-carousel_thumbs .main_product-image-box {
+  min-width: 60px;
+  max-width: 60px;
+}
+
+.main_product-image-carousel_thumbs img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* --- Utility Classes --- */
+.hided {
+  display: none !important;
+}
+
+/* ================================================
+   Responsive Rules
+   ================================================ */
+@media only screen and (max-width: 768px) {
+  .main_product-container {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .main_product-container > div {
+    width: 100%;
+  }
+
+  .main_product-reviews p {
+    font-size: 12px;
+  }
+
+  .main_product-reviews img {
+    width: 60px;
+  }
+
+  .col_pp_atc_usp_line p {
+    font-size: 12px;
+  }
+
+  .col_pp_atc_usp_line span {
+    padding: 2px 4px;
+  }
+
+  .main_product-review-meta p,
+  .main_product-review-content p,
+  .main_product-feature-line p {
+    font-size: 16px;
+  }
+
+  .main_product-title {
+    font-size: 24px;
+  }
+
+  .Desktop_only {
+    display: none !important;
+  }
+
+  .main_product-nutrition-info {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .Mobile_only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1475px) {
+  .under_cta_new p.cta-note {
+    font-size: 12px !important;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 915px) {
+  .under_cta_new {
+    gap: 8px;
+    padding-top: 10px;
+  }
+
+  .under_cta_new p.cta-note + p.cta-note {
+    padding-left: 8px;
+  }
+
+  .under_cta_new p.cta-note img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .under_cta_new p.cta-note svg {
+    width: 12px;
+    height: auto;
+    position: relative;
+    top: -0.5px;
+  }
+
+  .under_cta_new p.cta-note {
+    font-size: 12px !important;
+    gap: 4px;
+  }
+}
+
+/* ================================================
+   Lymph Theme Color Overrides (green #039869)
+   ================================================ */
+.main_product-review,
+.product_selector-content {
+  background: #f3eee0 !important;
+}
+
+.product-selector_block {
+  border: 1px solid #039869 !important;
+}
+
+.product-selector_perk_line {
+  background: #039869 !important;
+}
+
+.product-selector_bubble {
+  border: 2px solid #039869 !important;
+}
+
+.active .product-selector_bubble_inn {
+  background: #039869 !important;
+}
+
+.pp_var_checkbox {
+  background: #039869;
+  border: 1.5px solid #039869;
+}
+
+.pp_var_autoship {
+  border: 1px dashed #039869 !important;
+}
+
+.pp_var_checkbox svg path {
+  stroke: #fff;
+}
+
+.pp_var_autoship.disabled {
+  background: #e1ddd1 !important;
+}
+
+.product_tab-block.active {
+  border: 1px solid #039869 !important;
+}
+
+.col_pp_atc_usp_line span {
+  background: #039869 !important;
+}
