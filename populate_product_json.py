@@ -1,0 +1,226 @@
+#!/usr/bin/env python3
+"""
+Re-applies all Sculptique content to product.json.
+Run this whenever Shopify reverts the file:
+  python3 populate_product_json.py
+"""
+import json, re, os
+
+PRODUCT_JSON = os.path.join(os.path.dirname(__file__), "templates", "product.json")
+
+with open(PRODUCT_JSON) as f:
+    raw = f.read()
+
+# Strip leading comment block if present
+json_start = raw.find("{")
+comment = raw[:json_start]
+data = json.loads(raw[json_start:])
+
+s = data["sections"]
+
+# ── 1. product-information (custom hero section) ─────────────────────────────
+s["product_information"] = {
+    "type": "product-information",
+    "blocks": {
+        "tab_1": {
+            "type": "tab",
+            "settings": {
+                "title": "Ingredients proven by science",
+                "content": "<p><strong>Sculptique Ingredients:<\/strong><\/p><ul><li><strong>Echinacea purpurea Extract<\/strong> \u2013 Known for its anti-inflammatory properties, it may support skin health.<\/li><li><strong>Dandelion Extract<\/strong> \u2013 Traditionally used as a diuretic, it may help reduce water retention. <strong>Burdock Powder<\/strong> \u2013 Contains antioxidants that may promote skin clarity.<\/li><li><strong>Cleavers Extract<\/strong> \u2013 Believed to support lymphatic drainage and detoxification.<\/li><li><strong>Rutin<\/strong> \u2013 A flavonoid that may strengthen blood vessels and improve circulation.<\/li><li><strong>Bromelain Powder<\/strong> \u2013 An enzyme from pineapple that may reduce inflammation and support tissue repair.<\/li><li><strong>Lemon Powder<\/strong> \u2013 Rich in vitamin C, it may aid in collagen production and skin rejuvenation.<\/li><li><strong>Kelp Extract<\/strong> \u2013 A source of iodine and minerals that may support skin metabolism.<\/li><\/ul><p>These natural ingredients work together to reduce puffiness, bloating, fluid retention.<\/p>"
+            }
+        },
+        "tab_2": {
+            "type": "tab",
+            "settings": {
+                "title": "How does it actually work?",
+                "content": "<p>Sculptique works by improving blood flow and supporting lymphatic drainage to reduce fluid buildup that causes puffiness, inflammation, and water retention. It also reduces inflammation and boosts collagen production to help skin become firmer and smoother.<\/p>"
+            }
+        },
+        "tab_3": {
+            "type": "tab",
+            "settings": {
+                "title": "Shipping and returns",
+                "content": "<p>All of Sculptique orders get FREE shipping straight from our USA warehouse. Orders are usually shipped out within 1-2 working days, and you should receive the order within 3-7 working days for domestic USA orders, and within 10 working days for International orders.<\/p><p>We also offer a 60-day money back guarantee \u2014 if you are unsatisfied with our product, you can take advantage of our guarantee and ship back the product to us to get your return within 60 days of receiving your order.<\/p>"
+            }
+        }
+    },
+    "block_order": ["tab_1", "tab_2", "tab_3"],
+    "settings": {
+        "trustpilot_rating_text": "4.8/5 Excellent | Based on 2381 Reviews",
+        "product_title": "New Maximum Potency Formula - Lymphatic Drainage Capsules by Sculptique\u2122",
+        "benefit_text_1": "Join over 93 Thousand who say - it WORKS!",
+        "benefit_text_2": "Restores your body\u2019s natural 24-hour lymphatic cycle",
+        "benefit_text_3": "Helps reduce fluid retention and the appearance of puffiness and bloating",
+        "benefit_text_4": "Helps fall asleep faster, stay asleep longer and wake up energized",
+        "benefit_text_5": "Eliminates joint stiffness, pain, morning creakiness and feel more grounded",
+        "benefit_text_6": "Boosts energy, mental clarity and emotional balance",
+        "clinician_count": "521",
+        "clinician_description": "including dermatologists, share this on FrontrowMD.",
+        "review_author": "Margaret Ellison | FL",
+        "review_title": "Even my husband noticed... the spark came back.",
+        "review_text": "After years of hiding under coverups, picking apart my body, and feeling disconnected, I finally feel at ease again. I feel less bloated, lighter, like my body is working with me not against me. These past months, I\u2019ve been present. Even my marriage feels renewed, not just in how I look but in how I feel. It\u2019s hard to explain, but once you try it you\u2019ll get it. I\u2019d recommend this to my closest friends without question."
+    }
+}
+
+# ── 2. Problem / Symptoms ────────────────────────────────────────────────────
+s["problem_symptoms"]["blocks"] = {
+    "s_1": {"type": "column", "settings": {"title": "Bloating", "text": "<p>Your stomach is flat in the morning, but by evening you look six months pregnant.</p>", "link_label": "", "link": ""}},
+    "s_2": {"type": "column", "settings": {"title": "Ankle Swelling", "text": "<p>Your ankles disappear into \u201ckankles\u201d by the end of the day.</p>", "link_label": "", "link": ""}},
+    "s_3": {"type": "column", "settings": {"title": "Cellulite", "text": "<p>That dimpled, cottage cheese texture on your thighs won\u2019t go away no matter what you try.</p>", "link_label": "", "link": ""}},
+    "s_4": {"type": "column", "settings": {"title": "Brain Fog & Exhaustion", "text": "<p>You feel foggy and exhausted even after a full night\u2019s sleep.</p>", "link_label": "", "link": ""}},
+    "s_5": {"type": "column", "settings": {"title": "Joint Stiffness", "text": "<p>You wake up stiff and achy, like your body aged overnight.</p>", "link_label": "", "link": ""}}
+}
+s["problem_symptoms"]["block_order"] = ["s_1", "s_2", "s_3", "s_4", "s_5"]
+s["problem_symptoms"]["settings"]["title"] = "Why Your Bloating, Brain Fog & Swollen Legs Are Actually Connected"
+s["problem_symptoms"]["settings"]["button_label"] = ""
+
+# ── 3. Root Cause ────────────────────────────────────────────────────────────
+s["root_cause"]["settings"]["custom_liquid"] = (
+    "<div class='page-width'>"
+    "<h2>The Connection <strong>You\u2019ve Been Missing</strong></h2>"
+    "<h3>Your <strong>Hidden</strong> Drainage System</h3>"
+    "<p>Your lymphatic system is your body\u2019s internal cleaning crew\u2014a network of vessels that processes "
+    "<strong>3\u20134 liters of cellular waste and excess fluid every single day.</strong> "
+    "When it\u2019s working properly, you don\u2019t even know it exists.</p>"
+    "<p><strong>But after age 35, declining estrogen hijacks this system\u2019s ability to function.</strong> "
+    "Vessel pumping weakens, one-way valves fail, protein clogs form, and vessel walls become leaky. "
+    "Instead of processing and removing waste, it backs up in your tissues.</p>"
+    "<p>That\u2019s why you\u2019re bloated. That\u2019s why your ankles swell. That\u2019s why you see cellulite. "
+    "That\u2019s why you feel exhausted and foggy. "
+    "<strong>Your cells are literally sitting in their own waste\u2014and your body can\u2019t flush it out.</strong></p>"
+    "</div>"
+)
+
+# ── 4. Education / Science ───────────────────────────────────────────────────
+s["education_science"]["blocks"]["text"]["settings"]["text"] = (
+    "<p><strong>And it accumulates. Day after day. Week after week.</strong></p>"
+    "<p>That gallon of fluid your body should be draining every 24 hours? It\u2019s pooling in your stomach, "
+    "your legs, your face\u2014anywhere gravity and tissue structure allow it to settle.</p>"
+    "<p>The metabolic waste your cells produce overnight? It\u2019s still sitting there at noon. At dinner. "
+    "While you\u2019re trying to fall asleep.</p>"
+    "<p>That\u2019s why you\u2019re bloated. That\u2019s why your ankles swell. That\u2019s why you see cellulite. "
+    "That\u2019s why you feel exhausted and foggy. The longer this goes on, the worse it gets. "
+    "More congestion. More inflammation. More pressure on an already compromised system.</p>"
+)
+
+# ── 5. Missing Piece ─────────────────────────────────────────────────────────
+s["missing_piece"]["blocks"]["heading"]["settings"]["heading"] = "Why Nothing Has Worked"
+s["missing_piece"]["blocks"]["text"]["settings"]["text"] = (
+    "<p><strong>You cut out gluten, dairy, sugar. You ate clean for months.</strong> "
+    "Why it failed: Your diet only addressed what goes IN. It didn\u2019t fix your body\u2019s broken ability to drain what\u2019s already there.</p>"
+    "<p><strong>You tried viral lymphatic drops from TikTok.</strong> "
+    "Why it failed: They\u2019re just pricey water with trace herbs. The \u2018active ingredients\u2019 are destroyed by stomach acid. "
+    "No vessel repair, no protein breakdown\u2014just expensive urine.</p>"
+    "<p><strong>You got lymphatic massage or bought compression socks.</strong> "
+    "Why it failed: Temporary manual movement. Within 24\u201348 hours, everything backed up again because "
+    "your vessels still can\u2019t pump on their own.</p>"
+)
+
+# ── 6. Ingredients ───────────────────────────────────────────────────────────
+s["ingredients"]["blocks"] = {
+    "i_1": {"type": "column", "settings": {"title": "Cleavers Extract (100mg) \u2014 Reactivate Lymphatic Pumps", "text": "<p>Restores rhythmic vessel contractions that move lymph through your system. Contains iridoids that \u2018wake up\u2019 muscle cells in vessel walls. 2024 study showed enhanced immune cell activity for better waste clearance.</p>", "link_label": "", "link": ""}},
+    "i_2": {"type": "column", "settings": {"title": "Dandelion Extract (250mg) \u2014 Flush Excess Fluid", "text": "<p>Proven gentle diuretic that increases fluid excretion without harsh side effects. Human trial showed statistically significant increase in urination frequency and excretion ratio.</p>", "link_label": "", "link": ""}},
+    "i_3": {"type": "column", "settings": {"title": "Bromelain Powder (100mg) \u2014 Break Down Protein Clogs", "text": "<p>Proteolytic enzyme that clears blockages preventing drainage. Breaks down fibrin proteins creating \u2018sludge\u2019 in vessels. 2024 RCT showed significantly greater reductions in swelling than placebo.</p>", "link_label": "", "link": ""}},
+    "i_4": {"type": "column", "settings": {"title": "Rutin (100mg) \u2014 Strengthen Vessel Walls", "text": "<p>Reduces vessel permeability so fluid doesn\u2019t leak back into tissues. Clinical trials showed average 4.2 cm reduction in limb circumference over 6 months in lymphedema patients.</p>", "link_label": "", "link": ""}},
+    "i_5": {"type": "column", "settings": {"title": "Burdock Root Powder (200mg) \u2014 Reduce Inflammation", "text": "<p>Breaks the inflammation-congestion cycle. RCT showed significantly decreased inflammatory markers IL-6 and C-reactive protein. Also supports hormonal balance.</p>", "link_label": "", "link": ""}},
+    "i_6": {"type": "column", "settings": {"title": "Echinacea Purpurea Extract (500mg) \u2014 Boost Immune Clearance", "text": "<p>Enhances lymphocyte activity for better waste removal. Meta-analysis of 30 trials with 5,600+ participants showed 40% reduction in recurrent infections.</p>", "link_label": "", "link": ""}},
+    "i_7": {"type": "column", "settings": {"title": "Kelp Extract (30mg) \u2014 Support Metabolism", "text": "<p>Provides iodine for thyroid function and healthy metabolic rate. Sluggish thyroid = sluggish lymphatic drainage. Contains fucoxanthin shown to reduce body fat in human trials.</p>", "link_label": "", "link": ""}},
+    "i_8": {"type": "column", "settings": {"title": "Lemon Powder (50mg) \u2014 Antioxidant Protection", "text": "<p>Protects vessels from oxidative damage. RCT showed 145% improvement in vascular function. Supports circulation and metabolic health.</p>", "link_label": "", "link": ""}}
+}
+s["ingredients"]["block_order"] = ["i_1", "i_2", "i_3", "i_4", "i_5", "i_6", "i_7", "i_8"]
+s["ingredients"]["settings"]["title"] = "The 8-Ingredient System That Restores What Hormones Once Maintained"
+s["ingredients"]["settings"]["button_label"] = ""
+
+# ── 7. Synergistic Effect ────────────────────────────────────────────────────
+s["synergistic_effect"]["blocks"]["heading"]["settings"]["heading"] = "The Synergistic Effect"
+s["synergistic_effect"]["blocks"]["text"]["settings"]["text"] = (
+    "<p>Sculptique is the only formula that addresses ALL 6 mechanisms of lymphatic dysfunction simultaneously\u2014"
+    "not with symbolic doses, but with therapeutic amounts based on clinical research. "
+    "Not just moving fluid temporarily. Not just reducing inflammation. <strong>Complete restoration.</strong></p>"
+    "<p>These 8 natural ingredients work together to reactivate lymphatic pumps, flush excess fluid, "
+    "break down protein clogs, strengthen vessel walls, reduce inflammation, and boost immune clearance\u2014"
+    "restoring what hormones once maintained.</p>"
+)
+
+# ── 8. Social Proof ──────────────────────────────────────────────────────────
+s["social_proof"]["settings"]["custom_liquid"] = (
+    "<div class='page-width'>"
+    "<h2>Real Women, Real Results: <strong>93,000+ Transformations</strong></h2>"
+    "<p>Join over 93 Thousand who say - it WORKS!</p>"
+    "<div style='display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:32px;'>"
+    "<div style='text-align:center;'>"
+    "<div style='font-size:64px;font-weight:bold;color:#4a7c6b;'>87%</div>"
+    "<p>reported less bloating and tiredness in the first 4 weeks*</p>"
+    "<small>*Based on a four-week independent customer panel</small>"
+    "</div>"
+    "<div style='text-align:center;'>"
+    "<div style='font-size:64px;font-weight:bold;color:#4a7c6b;'>91%</div>"
+    "<p>reported less puffiness and firmer skin in the first 4 weeks*</p>"
+    "<small>*Based on a four-week independent customer panel</small>"
+    "</div></div></div>"
+)
+
+# ── 9. Trust Icons ───────────────────────────────────────────────────────────
+s["trust_icons_footer"]["blocks"] = {
+    "t_1": {"type": "column", "settings": {"title": "Free Shipping from USA", "text": "<p>On all orders</p>", "link_label": "", "link": ""}},
+    "t_2": {"type": "column", "settings": {"title": "Naturally Supports Your Body", "text": "<p>Promotes healthy immune cell functions</p>", "link_label": "", "link": ""}},
+    "t_3": {"type": "column", "settings": {"title": "100% Natural Ingredients", "text": "<p>8 active, natural ingredients</p>", "link_label": "", "link": ""}},
+    "t_4": {"type": "column", "settings": {"title": "Try it Risk Free for 60 Days", "text": "<p>60-day money-back guarantee</p>", "link_label": "", "link": ""}}
+}
+s["trust_icons_footer"]["block_order"] = ["t_1", "t_2", "t_3", "t_4"]
+s["trust_icons_footer"]["settings"]["title"] = ""
+s["trust_icons_footer"]["settings"]["button_label"] = ""
+s["trust_icons_footer"]["settings"]["column_alignment"] = "center"
+s["trust_icons_footer"]["settings"]["columns_mobile"] = "2"
+
+# ── 10. Expert Advice ────────────────────────────────────────────────────────
+s["expert_advice"]["blocks"]["heading"]["settings"]["heading"] = (
+    "Expert Advice from Dr. Emily Chen of a Premier New York Skin Clinic"
+)
+s["expert_advice"]["blocks"]["text"]["settings"]["text"] = (
+    "<p>Your nutrition plays a powerful role in your appearance. If your body is missing key vitamins and nutrients, "
+    "it can\u2019t process fat and upkeep healthy connective tissue, which is why unprocessed fat flows up and "
+    "starts pushing up against your skin, forming bumps you know as cellulite.</p>"
+    "<p>SmoothSkin by Sculptique\u2122 contains ingredients that are scientifically proven to enhance microcirculation, "
+    "boost lymphatic drainage, and reduce inflammation, which restores your tissue and breaks down the fat cells in your skin.</p>"
+)
+
+# ── 11. FAQ ──────────────────────────────────────────────────────────────────
+s["faq"]["blocks"] = {
+    "f_1": {"type": "collapsible_row", "settings": {"heading": "How is this different from lymphatic drops I saw on TikTok?", "icon": "none", "row_content": "<p>Lymphatic drops have poor bioavailability\u2014liquid ingredients pass through your digestive system too quickly to be properly absorbed. Most contain only milligrams of herbs (symbolic amounts, not therapeutic doses) and act as basic diuretics that pull water from your bloodstream, not from tissue swelling. Sculptique uses capsules with therapeutic doses (100\u2013500mg per ingredient) that are properly absorbed and work at the cellular level to restore vessel function, break down protein clogs, and strengthen vessel walls\u2014not just make you urinate more.</p>", "page": ""}},
+    "f_2": {"type": "collapsible_row", "settings": {"heading": "Why didn\u2019t my diet changes work?", "icon": "none", "row_content": "<p>Your diet only addressed what goes INTO your system (inflammation from food). It didn\u2019t fix your body\u2019s broken ability to drain what\u2019s already there. That\u2019s why you could eat perfectly clean and still wake up bloated\u2014the backed-up lymphatic waste was still pooling in your tissues.</p>", "page": ""}},
+    "f_3": {"type": "collapsible_row", "settings": {"heading": "How long until I see results?", "icon": "none", "row_content": "<p>Most women notice something within the first week\u2014feeling lighter, less bloated, morning puffiness fading faster. Visible changes happen by weeks 2\u20133. Transformation becomes undeniable by weeks 4\u20136. But true restoration takes time\u2014we recommend 90 days for complete results.</p>", "page": ""}},
+    "f_4": {"type": "collapsible_row", "settings": {"heading": "Is this safe? Any side effects?", "icon": "none", "row_content": "<p>Sculptique contains 100% natural botanical ingredients used safely for centuries. The most common experience is increased urination in the first few days (expected\u2014you\u2019re flushing excess fluid). Serious side effects are extremely rare. However, if you have pre-existing conditions or take prescription medications, consult your healthcare provider first.</p>", "page": ""}},
+    "f_5": {"type": "collapsible_row", "settings": {"heading": "Can I take this with other supplements?", "icon": "none", "row_content": "<p>Yes. Sculptique works synergistically with most supplements. However, if you\u2019re taking blood thinners, diuretics, thyroid medication, or immune-suppressing drugs, check with your healthcare provider first.</p>", "page": ""}},
+    "f_6": {"type": "collapsible_row", "settings": {"heading": "How do I use it?", "icon": "none", "row_content": "<p>Take 2 capsules daily with water. Any time of day (though mornings are ideal). With or without food. Just be consistent.</p>", "page": ""}},
+    "f_7": {"type": "collapsible_row", "settings": {"heading": "What if it doesn\u2019t work for me?", "icon": "none", "row_content": "<p>You have 60 full days to try it. If you don\u2019t feel lighter, less bloated, more energized\u2014send it back. Even if you\u2019ve taken every capsule. We\u2019ll refund your purchase immediately. You only keep Sculptique if it works for YOU.</p>", "page": ""}},
+    "f_8": {"type": "collapsible_row", "settings": {"heading": "Where is this manufactured?", "icon": "none", "row_content": "<p>Sculptique is manufactured in the USA at an FDA-registered, GMP-certified facility. We use Infrared Spectroscopy testing, heavy metal testing, and third-party quality control. Every batch is tested to ensure therapeutic doses with no contaminants.</p>", "page": ""}},
+    "f_9": {"type": "collapsible_row", "settings": {"heading": "Why isn\u2019t this in stores?", "icon": "none", "row_content": "<p>Two reasons: Quality control (we oversee the entire process from sourcing to testing) and price (retail markup would make it cost at least double). By selling direct, we maintain the highest quality while keeping the price affordable.</p>", "page": ""}},
+    "f_10": {"type": "collapsible_row", "settings": {"heading": "Is this vegan/gluten-free?", "icon": "none", "row_content": "<p>Yes. 100% vegan, gluten-free, sugar-free, no artificial ingredients.</p>", "page": ""}}
+}
+s["faq"]["block_order"] = ["f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10"]
+
+# ── Fix section order ─────────────────────────────────────────────────────────
+data["order"] = [
+    "main",
+    "product_information",
+    "problem_symptoms",
+    "root_cause",
+    "education_science",
+    "missing_piece",
+    "ingredients",
+    "synergistic_effect",
+    "social_proof",
+    "reviews",
+    "trust_icons_footer",
+    "expert_advice",
+    "faq",
+    "related-products"
+]
+
+# ── Write back ────────────────────────────────────────────────────────────────
+output = comment + json.dumps(data, indent=2, ensure_ascii=False)
+with open(PRODUCT_JSON, "w") as f:
+    f.write(output)
+
+print("Done. product.json updated with all Sculptique content.")
