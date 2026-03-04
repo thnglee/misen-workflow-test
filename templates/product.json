@@ -12,6 +12,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "kaching_bundles_app_block_4BQUiX": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
+          }
+        },
         "trustpilot": {
           "type": "trustpilot_rating",
           "settings": {
@@ -36,18 +43,18 @@
         "benefits": {
           "type": "benefits_list",
           "settings": {
-            "benefit_icon_1": "\ud83d\udc65",
-            "benefit_text_1": "Join over 93 Thousand who say - it WORKS!",
-            "benefit_icon_2": "\ud83d\udd04",
-            "benefit_text_2": "Restores your body's natural 24-hour lymphatic cycle",
-            "benefit_icon_3": "\ud83d\udca7",
-            "benefit_text_3": "Helps reduce fluid retention and the appearance of puffiness and bloating",
-            "benefit_icon_4": "\ud83d\ude34",
-            "benefit_text_4": "Helps fall asleep faster, stay asleep longer and wake up energized",
-            "benefit_icon_5": "\ud83e\uddb4",
-            "benefit_text_5": "Eliminates joint stiffness, pain, morning creakiness and feel more grounded",
-            "benefit_icon_6": "\u26a1",
-            "benefit_text_6": "Boosts energy, mental clarity and emotional balance"
+            "benefit_icon_1": "🔄",
+            "benefit_text_1": "Supports Healthy Lymph Flow",
+            "benefit_icon_2": "💧",
+            "benefit_text_2": "Reduces Water Retention",
+            "benefit_icon_3": "✨",
+            "benefit_text_3": "Boosts Energy",
+            "benefit_icon_4": "🌱",
+            "benefit_text_4": "Natural Ingredients",
+            "benefit_icon_5": "🛡️",
+            "benefit_text_5": "Clinically Tested",
+            "benefit_icon_6": "🕒",
+            "benefit_text_6": "Fast Acting"
           }
         },
         "variant_picker": {
@@ -56,10 +63,6 @@
             "picker_type": "button",
             "swatch_shape": "circle"
           }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -74,13 +77,13 @@
         }
       },
       "block_order": [
+        "kaching_bundles_app_block_4BQUiX",
         "trustpilot",
         "title",
         "price",
         "clinicians",
         "benefits",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "description"
       ],
@@ -100,10 +103,6 @@
         "padding_bottom": 12
       }
     },
-    "product_information": {
-      "type": "product-information",
-      "settings": {}
-    },
     "problem_symptoms": {
       "type": "multicolumn",
       "blocks": {
@@ -111,7 +110,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Your stomach is flat in the morning, but by evening you look six months pregnant.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -120,7 +119,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Your ankles disappear into 'kankles' by the end of the day.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -129,7 +128,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>That dimpled, cottage cheese texture on your thighs won't go away no matter what you try.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -138,7 +137,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>You feel foggy and exhausted even after a full night's sleep.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -147,15 +146,21 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>You wake up stiff and achy, like your body aged overnight.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": ["s_1", "s_2", "s_3", "s_4", "s_5"],
+      "block_order": [
+        "s_1",
+        "s_2",
+        "s_3",
+        "s_4",
+        "s_5"
+      ],
       "settings": {
-        "title": "Why Your Bloating, Brain Fog & Swollen Legs Are Actually Connected",
+        "title": "Problem / Symptoms",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -174,7 +179,7 @@
     "root_cause": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class='page-width scroll-trigger animate--slide-in'>\n  <div class=\"root-cause-table\">\n    <div class=\"root-cause-table__header\">\n      <span>Your Symptom</span>\n      <span>The Real Cause</span>\n    </div>\n    <div class=\"root-cause-table__row\">\n      <div class=\"root-cause__symptom\"><span class=\"root-cause__icon\">\ud83d\udca7</span><span>Bloating & puffiness</span></div>\n      <div class=\"root-cause__cause\">4-5 liters of lymphatic fluid backing up in tissue</div>\n    </div>\n    <div class=\"root-cause-table__row\">\n      <div class=\"root-cause__symptom\"><span class=\"root-cause__icon\">\ud83e\uddb5</span><span>Swollen legs</span></div>\n      <div class=\"root-cause__cause\">Gravity pulling backed-up lymph to lower extremities</div>\n    </div>\n    <div class=\"root-cause-table__row\">\n      <div class=\"root-cause__symptom\"><span class=\"root-cause__icon\">\ud83c\udf4a</span><span>Cellulite appearance</span></div>\n      <div class=\"root-cause__cause\">Fluid and toxins trapped between fat cells, creating dimpling</div>\n    </div>\n    <div class=\"root-cause-table__row\">\n      <div class=\"root-cause__symptom\"><span class=\"root-cause__icon\">\ud83e\udde0</span><span>Brain fog & exhaustion</span></div>\n      <div class=\"root-cause__cause\">Glymphatic system can't clear metabolic waste from brain</div>\n    </div>\n    <div class=\"root-cause-table__row\">\n      <div class=\"root-cause__symptom\"><span class=\"root-cause__icon\">\ud83e\uddb4</span><span>Morning stiffness</span></div>\n      <div class=\"root-cause__cause\">Overnight lymph accumulation in joints and tissues</div>\n    </div>\n  </div>\n  <div class=\"section-transition\" style=\"text-align: center; margin-top: 40px;\">\n    <span class=\"chevron-icon\" style=\"font-size: 24px; color: var(--color-accent-teal);\">\u00bb</span>\n    <h3>Your Hidden Drainage System</h3>\n  </div>\n</div>",
+        "custom_liquid": "<!-- Symptom-to-Root-Cause table goes here -->\n<div class='page-width'><h2>Root Cause Education</h2></div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -186,19 +191,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Why This Happens After 35",
+            "heading": "The Science Behind Sculptique",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Your lymphatic system is your body's internal cleaning crew\u2014a network of vessels that processes <strong>3-4 liters of cellular waste and excess fluid every single day.</strong></p><p>When it's working properly, you don't even know it exists. But after 35, as hormones shift, your lymphatic system becomes fundamentally compromised.</p><ul><li>Lymphatic pumping slows by 40%</li><li>Protein clogs form in lymph vessels</li><li>Inflammation impairs drainage</li><li>Metabolism of lymph fluid slows</li><li>Waste clearance becomes inefficient</li></ul>",
+            "text": "<p>...</p>",
             "text_style": "body"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -220,19 +228,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "The Missing Piece:",
+            "heading": "The Missing Piece",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Comprehensive lymphatic restoration that addresses vessel pumping, protein clearance, inflammation, and metabolism\u2014all at once.</p>",
+            "text": "<p>pale green background</p>",
             "text_style": "body"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -254,8 +265,8 @@
         "i_1": {
           "type": "column",
           "settings": {
-            "title": "Reactivate Lymphatic Pumps",
-            "text": "<p><strong>Cleavers Extract:</strong> Lymphatic pump reactivation.</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -263,8 +274,8 @@
         "i_2": {
           "type": "column",
           "settings": {
-            "title": "Flush Excess Fluid",
-            "text": "<p><strong>Dandelion Extract (250mg):</strong> Flush excess fluid.</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -272,8 +283,8 @@
         "i_3": {
           "type": "column",
           "settings": {
-            "title": "Break Protein Clogs & Strengthen Walls",
-            "text": "<p><strong>Bromelain Powder (100mg):</strong> Break down protein clogs.<br><strong>Rutin (100mg):</strong> Strengthen vessel walls.</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -281,16 +292,21 @@
         "i_4": {
           "type": "column",
           "settings": {
-            "title": "Anti-inflammation & Support",
-            "text": "<p><strong>Burdock Root & Echinacea:</strong> Anti-inflammation and Immune support.<br><strong>Kelp & Lemon Powder:</strong> Metabolic support & Antioxidant cleansing.</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": ["i_1", "i_2", "i_3", "i_4"],
+      "block_order": [
+        "i_1",
+        "i_2",
+        "i_3",
+        "i_4"
+      ],
       "settings": {
-        "title": "The 8-Ingredient System That Restores What Hormones Once Maintained",
+        "title": "8-Ingredient System",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -319,11 +335,14 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Together, they address all 6 failure points simultaneously. These herbs work synergistically, making each other more effective. Begins working efficiently, moving waste out. Builds momentum over time. Reaches full restoration (marking end of vicious cycle).</p><p><em>\"This isn't symptom masking. This is root cause restoration.\"</em></p>"
+            "text": "<p></p>"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -336,7 +355,7 @@
     "social_proof": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class='page-width scroll-trigger animate--slide-in'>\n  <div class=\"trustpilot-badge\" style=\"text-align: center; margin-bottom: 2rem;\">\n    <span class=\"trustpilot-stars\" style=\"color: var(--color-trustpilot); font-size: 1.2rem; letter-spacing: 2px;\">\u2605\u2605\u2605\u2605\u2605</span>\n    <span style=\"font-weight: 600; margin-left: 8px;\">93,000+ Customers Worldwide</span>\n  </div>\n  <h2 style=\"text-align: center; margin-bottom: 3rem;\">Real Women, Real Results: 93,000+ Transformations</h2>\n  <div class='stat-circles' style=\"display: flex; gap: 4rem; justify-content: center; flex-wrap: wrap;\">\n    <div class=\"stat-circle\" style=\"text-align: center; max-width: 250px;\">\n      <div class=\"stat-circle__ring\" style=\"width: 140px; height: 140px; border-radius: 50%; background: conic-gradient(var(--color-accent-teal) 87%, #e0e0e0 0); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;\">\n        <span class=\"stat-circle__number\" style=\"background: white; border-radius: 50%; width: 110px; height: 110px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700;\">87%</span>\n      </div>\n      <p style=\"font-weight: 600;\">reported less bloating and tiredness in the first 4 weeks*</p>\n    </div>\n    <div class=\"stat-circle\" style=\"text-align: center; max-width: 250px;\">\n      <div class=\"stat-circle__ring\" style=\"width: 140px; height: 140px; border-radius: 50%; background: conic-gradient(var(--color-accent-teal) 91%, #e0e0e0 0); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;\">\n        <span class=\"stat-circle__number\" style=\"background: white; border-radius: 50%; width: 110px; height: 110px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700;\">91%</span>\n      </div>\n      <p style=\"font-weight: 600;\">reported less puffiness and firmer skin in the first 4 weeks*</p>\n    </div>\n  </div>\n  <p style=\"text-align: center; font-size: 0.85rem; color: #666; margin-top: 2rem;\">*Based on a four-week independent customer panel</p>\n</div>",
+        "custom_liquid": "<div class='page-width scroll-trigger animate--slide-in'><div class='stat-circles' style='background: conic-gradient(...)'><h2>87% and 91%</h2></div></div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -357,8 +376,8 @@
         "t_1": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping from USA",
-            "text": "<p>On all orders</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -366,8 +385,8 @@
         "t_2": {
           "type": "column",
           "settings": {
-            "title": "Naturally Supports Your Body",
-            "text": "<p>Promotes healthy immune cell functions</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -375,8 +394,8 @@
         "t_3": {
           "type": "column",
           "settings": {
-            "title": "100% Natural Ingredients",
-            "text": "<p>8 active, natural ingredients</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -384,14 +403,19 @@
         "t_4": {
           "type": "column",
           "settings": {
-            "title": "Try it Risk Free for 60 Days",
-            "text": "<p>60-day money-back guarantee</p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": ["t_1", "t_2", "t_3", "t_4"],
+      "block_order": [
+        "t_1",
+        "t_2",
+        "t_3",
+        "t_4"
+      ],
       "settings": {
         "title": "Trust Icons",
         "heading_size": "h1",
@@ -415,19 +439,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Expert Advice From:",
+            "heading": "Expert Advice",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Dr. Emily Chen of a New York Skin Clinic</strong></p><p>\"...breaks down the fat cells in your skin.\" After years of observing lymphatic dysfunction, I finally found a holistic compound that targets the missing link of stagnant fluid. This comprehensive method helps to naturally resolve the root causes of puffiness and tiredness without aggressive interventions.</p><p><a href='#buy-box' style='color: var(--color-accent-teal); font-weight: bold;'>Try Lymphatic Drainage Risk-Free \u00bb</a></p><p><small>\ud83d\udd12 60-Day Money-Back Guarantee</small></p>",
+            "text": "<p></p>",
             "text_style": "body"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -474,7 +501,11 @@
           }
         }
       },
-      "block_order": ["f_1", "f_2", "f_3"],
+      "block_order": [
+        "f_1",
+        "f_2",
+        "f_3"
+      ],
       "settings": {
         "caption": "",
         "heading": "Frequently Asked Questions",
@@ -511,7 +542,6 @@
   },
   "order": [
     "main",
-    "product_information",
     "problem_symptoms",
     "root_cause",
     "education_science",
