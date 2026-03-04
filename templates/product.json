@@ -12,18 +12,28 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "kaching_bundles_app_block_4BQUiX": {
-          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
-          "settings": {
-            "product": "{{product}}",
-            "manual_deal_block_id": ""
-          }
-        },
         "trustpilot": {
           "type": "trustpilot_rating",
           "settings": {
             "rating_score": "4.8/5 Excellent",
             "review_count": "2381"
+          }
+        },
+        "benefits_list_fP7tN8": {
+          "type": "benefits_list",
+          "settings": {
+            "benefit_icon_1": "🔄",
+            "benefit_text_1": "",
+            "benefit_icon_2": "💧",
+            "benefit_text_2": "",
+            "benefit_icon_3": "✨",
+            "benefit_text_3": "",
+            "benefit_icon_4": "🌱",
+            "benefit_text_4": "",
+            "benefit_icon_5": "🛡️",
+            "benefit_text_5": "",
+            "benefit_icon_6": "🕒",
+            "benefit_text_6": ""
           }
         },
         "title": {
@@ -57,11 +67,11 @@
             "benefit_text_6": "Fast Acting"
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
+        "kaching_bundles_app_block_4BQUiX": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
           }
         },
         "buy_buttons": {
@@ -70,22 +80,17 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         }
       },
       "block_order": [
-        "kaching_bundles_app_block_4BQUiX",
         "trustpilot",
+        "benefits_list_fP7tN8",
         "title",
         "price",
         "clinicians",
         "benefits",
-        "variant_picker",
-        "buy_buttons",
-        "description"
+        "kaching_bundles_app_block_4BQUiX",
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
