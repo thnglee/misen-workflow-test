@@ -100,6 +100,10 @@
         "padding_bottom": 12
       }
     },
+    "product_information": {
+      "type": "product-information",
+      "settings": {}
+    },
     "problem_symptoms": {
       "type": "multicolumn",
       "blocks": {
@@ -149,13 +153,7 @@
           }
         }
       },
-      "block_order": [
-        "s_1",
-        "s_2",
-        "s_3",
-        "s_4",
-        "s_5"
-      ],
+      "block_order": ["s_1", "s_2", "s_3", "s_4", "s_5"],
       "settings": {
         "title": "Why Your Bloating, Brain Fog & Swollen Legs Are Actually Connected",
         "heading_size": "h1",
@@ -200,10 +198,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -237,10 +232,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -296,12 +288,7 @@
           }
         }
       },
-      "block_order": [
-        "i_1",
-        "i_2",
-        "i_3",
-        "i_4"
-      ],
+      "block_order": ["i_1", "i_2", "i_3", "i_4"],
       "settings": {
         "title": "The 8-Ingredient System That Restores What Hormones Once Maintained",
         "heading_size": "h1",
@@ -336,10 +323,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -407,12 +391,7 @@
           }
         }
       },
-      "block_order": [
-        "t_1",
-        "t_2",
-        "t_3",
-        "t_4"
-      ],
+      "block_order": ["t_1", "t_2", "t_3", "t_4"],
       "settings": {
         "title": "Trust Icons",
         "heading_size": "h1",
@@ -448,10 +427,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -498,11 +474,7 @@
           }
         }
       },
-      "block_order": [
-        "f_1",
-        "f_2",
-        "f_3"
-      ],
+      "block_order": ["f_1", "f_2", "f_3"],
       "settings": {
         "caption": "",
         "heading": "Frequently Asked Questions",
@@ -539,6 +511,7 @@
   },
   "order": [
     "main",
+    "product_information",
     "problem_symptoms",
     "root_cause",
     "education_science",
