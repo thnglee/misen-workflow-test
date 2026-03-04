@@ -549,6 +549,12 @@
             </div>
           </div>
 
+          {%- for block in section.blocks -%}
+            {%- if block.type == '@app' -%}
+              {% render block %}
+            {%- endif -%}
+          {%- endfor -%}
+
           <div class="product_selector-content" style="margin-top: 0">
             <div class="product-selector_outer active_block" data="sub">
               <div
