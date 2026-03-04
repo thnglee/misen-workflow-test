@@ -1,13 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
+        "trustpilot": {
+          "type": "trustpilot_rating",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "rating_score": "4.8/5 Excellent",
+            "review_count": "2381"
           }
         },
         "title": {
@@ -17,6 +26,29 @@
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "clinicians": {
+          "type": "clinicians_badge",
+          "settings": {
+            "clinician_count": "521"
+          }
+        },
+        "benefits": {
+          "type": "benefits_list",
+          "settings": {
+            "benefit_icon_1": "🔄",
+            "benefit_text_1": "Supports Healthy Lymph Flow",
+            "benefit_icon_2": "💧",
+            "benefit_text_2": "Reduces Water Retention",
+            "benefit_icon_3": "✨",
+            "benefit_text_3": "Boosts Energy",
+            "benefit_icon_4": "🌱",
+            "benefit_text_4": "Natural Ingredients",
+            "benefit_icon_5": "🛡️",
+            "benefit_text_5": "Clinically Tested",
+            "benefit_icon_6": "🕒",
+            "benefit_text_6": "Fast Acting"
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -39,36 +71,6 @@
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "trustpilot": {
-          "type": "trustpilot_rating",
-          "settings": {
-            "rating_score": "4.8/5 Excellent",
-            "review_count": "2381"
-          }
-        },
-        "clinicians": {
-          "type": "clinicians_badge",
-          "settings": {
-            "clinician_count": "521"
-          }
-        },
-        "benefits": {
-          "type": "benefits_list",
-          "settings": {
-            "benefit_text_1": "Supports Healthy Lymph Flow",
-            "benefit_text_2": "Reduces Water Retention",
-            "benefit_text_3": "Boosts Energy",
-            "benefit_text_4": "Natural Ingredients",
-            "benefit_text_5": "Clinically Tested",
-            "benefit_text_6": "Fast Acting"
-          }
         }
       },
       "block_order": [
@@ -98,6 +100,424 @@
         "padding_bottom": 12
       }
     },
+    "problem_symptoms": {
+      "type": "multicolumn",
+      "blocks": {
+        "s_1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "s_2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "s_3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "s_4": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "s_5": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "s_1",
+        "s_2",
+        "s_3",
+        "s_4",
+        "s_5"
+      ],
+      "settings": {
+        "title": "Problem / Symptoms",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "root_cause": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!-- Symptom-to-Root-Cause table goes here -->\n<div class='page-width'><h2>Root Cause Education</h2></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "education_science": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Science Behind Sculptique",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>...</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "missing_piece": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Missing Piece",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>pale green background</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ingredients": {
+      "type": "multicolumn",
+      "blocks": {
+        "i_1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "i_2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "i_3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "i_4": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "i_1",
+        "i_2",
+        "i_3",
+        "i_4"
+      ],
+      "settings": {
+        "title": "8-Ingredient System",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "synergistic_effect": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Synergistic Effect",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "social_proof": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class='page-width scroll-trigger animate--slide-in'><div class='stat-circles' style='background: conic-gradient(...)'><h2>87% and 91%</h2></div></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "reviews": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!-- Reviews Integration (App Block fallback) -->",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "trust_icons_footer": {
+      "type": "multicolumn",
+      "blocks": {
+        "t_1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "t_2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "t_3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "t_4": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "t_1",
+        "t_2",
+        "t_3",
+        "t_4"
+      ],
+      "settings": {
+        "title": "Trust Icons",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "expert_advice": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Expert Advice",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "f_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 1",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "f_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 2",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "f_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 3",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "f_1",
+        "f_2",
+        "f_3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -115,247 +535,9 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "trust_bar": {
-      "type": "multicolumn",
-      "settings": {
-        "title": "",
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1"
-      },
-      "blocks": {
-        "logo_1": {
-          "type": "column",
-          "settings": {}
-        },
-        "logo_2": {
-          "type": "column",
-          "settings": {}
-        },
-        "logo_3": {
-          "type": "column",
-          "settings": {}
-        },
-        "logo_4": {
-          "type": "column",
-          "settings": {}
-        }
-      },
-      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4"]
-    },
-    "problem_symptoms": {
-      "type": "multicolumn",
-      "settings": {
-        "title": "Problem / Symptoms",
-        "columns_desktop": 5,
-        "color_scheme": "scheme-2"
-      },
-      "blocks": {
-        "s_1": {
-          "type": "column",
-          "settings": {}
-        },
-        "s_2": {
-          "type": "column",
-          "settings": {}
-        },
-        "s_3": {
-          "type": "column",
-          "settings": {}
-        },
-        "s_4": {
-          "type": "column",
-          "settings": {}
-        },
-        "s_5": {
-          "type": "column",
-          "settings": {}
-        }
-      },
-      "block_order": ["s_1", "s_2", "s_3", "s_4", "s_5"]
-    },
-    "root_cause": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<!-- Symptom-to-Root-Cause table goes here -->\n<div class='page-width'><h2>Root Cause Education</h2></div>"
-      }
-    },
-    "education_science": {
-      "type": "image-with-text",
-      "settings": {
-        "layout": "image_first"
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Science Behind Sculptique"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>...</p>"
-          }
-        }
-      },
-      "block_order": ["heading", "text"]
-    },
-    "missing_piece": {
-      "type": "image-with-text",
-      "settings": {
-        "layout": "text_first"
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Missing Piece"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>pale green background</p>"
-          }
-        }
-      },
-      "block_order": ["heading", "text"]
-    },
-    "ingredients": {
-      "type": "multicolumn",
-      "settings": {
-        "title": "8-Ingredient System",
-        "columns_desktop": 4
-      },
-      "blocks": {
-        "i_1": {
-          "type": "column",
-          "settings": {}
-        },
-        "i_2": {
-          "type": "column",
-          "settings": {}
-        },
-        "i_3": {
-          "type": "column",
-          "settings": {}
-        },
-        "i_4": {
-          "type": "column",
-          "settings": {}
-        }
-      },
-      "block_order": ["i_1", "i_2", "i_3", "i_4"]
-    },
-    "synergistic_effect": {
-      "type": "rich-text",
-      "settings": {},
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Synergistic Effect"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p></p>"
-          }
-        }
-      },
-      "block_order": ["heading", "text"]
-    },
-    "social_proof": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class='page-width scroll-trigger animate--slide-in'><div class='stat-circles' style='background: conic-gradient(...)'><h2>87% and 91%</h2></div></div>"
-      }
-    },
-    "reviews": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<!-- Reviews Integration (App Block fallback) -->"
-      }
-    },
-    "trust_icons_footer": {
-      "type": "multicolumn",
-      "settings": {
-        "title": "Trust Icons",
-        "columns_desktop": 4
-      },
-      "blocks": {
-        "t_1": {
-          "type": "column",
-          "settings": {}
-        },
-        "t_2": {
-          "type": "column",
-          "settings": {}
-        },
-        "t_3": {
-          "type": "column",
-          "settings": {}
-        },
-        "t_4": {
-          "type": "column",
-          "settings": {}
-        }
-      },
-      "block_order": ["t_1", "t_2", "t_3", "t_4"]
-    },
-    "expert_advice": {
-      "type": "image-with-text",
-      "settings": {
-        "layout": "image_first"
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Expert Advice"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p></p>"
-          }
-        }
-      },
-      "block_order": ["heading", "text"]
-    },
-    "faq": {
-      "type": "collapsible-content",
-      "settings": {
-        "heading": "Frequently Asked Questions"
-      },
-      "blocks": {
-        "f_1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Question 1"
-          }
-        },
-        "f_2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Question 2"
-          }
-        },
-        "f_3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Question 3"
-          }
-        }
-      },
-      "block_order": ["f_1", "f_2", "f_3"]
     }
   },
   "order": [
-    "trust_bar",
     "main",
     "problem_symptoms",
     "root_cause",
